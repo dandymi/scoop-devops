@@ -1,0 +1,27 @@
+{
+    "version": "2.9.1",
+    "description": "A Distributed Database For High-Performance Computing With In-Memory Speed",
+    "homepage": "https://ignite.apache.org/",
+    "licence": "Apache-2.0",
+    "url": "https://downloads.apache.org/ignite/2.9.1/apache-ignite-2.9.1-bin.zip",
+    "extract_dir": "apache-ignite-2.9.1",
+    "bin": [
+        ["bin\\ignite.bat", "ignite"],
+        ["bin\\igniterouter.bat", "igniterouter"],
+        ["bin\\sqlline.bat", "sqlline"],
+        "bin\\ignitevisorcmd.bat",
+        "bin\\control.bat"
+    ],
+    "persist": "config",
+    "checkver": {
+        "url": "https://ignite.apache.org/download.cgi",
+        "regex": "([\\d.]+) (latest)"
+    },
+    "autoupdate": {
+        "url": "https://downloads.apache.org/ignite/$version/apache-ignite-$version-bin.zip",
+        "hash": {
+            "url": "$url.sha512"
+        },
+        "extract_dir": "apache-ivy-$version"
+    }
+}
