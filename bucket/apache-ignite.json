@@ -4,7 +4,8 @@
     "homepage": "https://ignite.apache.org/",
     "licence": "Apache-2.0",
     "url": "https://downloads.apache.org/ignite/2.9.1/apache-ignite-2.9.1-bin.zip",
-    "extract_dir": "apache-ignite-2.9.1",
+    "hash": "776dfbe961edb117afc9b78501bb114f21a0774f5adad5627513142f65391e1f",
+    "extract_dir": "apache-ignite-2.9.1-bin",
     "bin": [
         ["bin\\ignite.bat", "ignite"],
         ["bin\\igniterouter.bat", "igniterouter"],
@@ -22,6 +23,6 @@
         "hash": {
             "url": "$url.sha512"
         },
-        "extract_dir": "apache-ivy-$version"
+        "extract_dir": "apache-ivy-$version-bin"
     }
 }
