@@ -33,7 +33,7 @@
     ],
     "env_set": {
         "IGNITE_HOME": "$dir",
-        "IGNITE_WORK_DIR": "$persist\\work"
+        "IGNITE_WORK_DIR": "$dir\\work"
     },
     "persist": [
         "config",
