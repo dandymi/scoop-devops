@@ -3,6 +3,12 @@
     "description": "A Distributed Database For High-Performance Computing With In-Memory Speed",
     "homepage": "https://ignite.apache.org/",
     "licence": "Apache-2.0",
+    "suggest": {
+        "JDK": [
+            "java/oraclejdk",
+            "java/openjdk"
+        ]
+    },
     "url": "https://downloads.apache.org/ignite/2.9.1/apache-ignite-2.9.1-bin.zip",
     "hash": "776dfbe961edb117afc9b78501bb114f21a0774f5adad5627513142f65391e1f",
     "extract_dir": "apache-ignite-2.9.1-bin",
@@ -15,13 +21,13 @@
     ],
     "post_install": [
         "# Enable kafka, kubernetes, log4j, slf4j, spring-data, rest-http, web optional modules",
-        "Move-Item -Path $dir\\lib\\optional\\ignite-kafka -Destination $dir\\lib",
-        "Move-Item -Path $dir\\lib\\optional\\ignite-kubernetes -Destination $dir\\lib",
-        "Move-Item -Path $dir\\lib\\optional\\ignite-log4j -Destination $dir\\lib",
-        "Move-Item -Path $dir\\lib\\optional\\ignite-slf4j -Destination $dir\\lib",
-        "Move-Item -Path $dir\\lib\\optional\\ignite-spring-data -Destination $dir\\lib",
-        "Move-Item -Path $dir\\lib\\optional\\ignite-rest-http -Destination $dir\\lib",
-        "Move-Item -Path $dir\\lib\\optional\\ignite-web -Destination $dir\\lib",
+        "Move-Item -Path $dir\\libs\\optional\\ignite-kafka -Destination $dir\\lib",
+        "Move-Item -Path $dir\\libs\\optional\\ignite-kubernetes -Destination $dir\\lib",
+        "Move-Item -Path $dir\\libs\\optional\\ignite-log4j -Destination $dir\\lib",
+        "Move-Item -Path $dir\\libs\\optional\\ignite-slf4j -Destination $dir\\lib",
+        "Move-Item -Path $dir\\libs\\optional\\ignite-spring-data -Destination $dir\\lib",
+        "Move-Item -Path $dir\\libs\\optional\\ignite-rest-http -Destination $dir\\lib",
+        "Move-Item -Path $dir\\libs\\optional\\ignite-web -Destination $dir\\lib",
         "# Configuring working dir",
         "New-Item -Type Directory \"$persist\\work\" -Force | Out-Null"
     ],
