@@ -13,7 +13,26 @@
         "bin\\ignitevisorcmd.bat",
         "bin\\control.bat"
     ],
-    "persist": "config",
+    "post_install": [
+        "# Enable kafka, kubernetes, log4j, slf4j, spring-data, rest-http, web optional modules",
+        "Move-Item -Path $dir\\lib\\optional\\ignite-kafka -Destination $dir\\lib",
+        "Move-Item -Path $dir\\lib\\optional\\ignite-kubernetes -Destination $dir\\lib",
+        "Move-Item -Path $dir\\lib\\optional\\ignite-log4j -Destination $dir\\lib",
+        "Move-Item -Path $dir\\lib\\optional\\ignite-slf4j -Destination $dir\\lib",
+        "Move-Item -Path $dir\\lib\\optional\\ignite-spring-data -Destination $dir\\lib",
+        "Move-Item -Path $dir\\lib\\optional\\ignite-rest-http -Destination $dir\\lib",
+        "Move-Item -Path $dir\\lib\\optional\\ignite-web -Destination $dir\\lib",
+        "# Configuring working dir",
+        "New-Item -Type Directory \"$persist\\work\" -Force | Out-Null"
+    ],
+    "env_set": {
+        "IGNITE_HOME": "$dir",
+        "IGNITE_WORK_DIR": "$persist\\work"
+    },
+    "persist": [
+        "config",
+        "work"
+    ],
     "checkver": {
         "url": "https://ignite.apache.org/download.cgi",
         "regex": "([\\d.]+) (latest)"
