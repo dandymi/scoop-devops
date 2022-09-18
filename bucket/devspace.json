@@ -1,7 +1,7 @@
 {
-	"version": "v6.1.1",
+	"version": "6.1.1",
 	"description": "Open source developer tool for Kubernetes that lets you develop and deploy cloud-native software faster",
-	"homepage": "https://devspace.sh/",
+	"homepage": "https://github.com/loft-sh/devspace/",
 	"licence": "Apache-2.0",
 	"architecture": {
 		"64bit": {
@@ -25,17 +25,18 @@
 			]
 		}
 	},
-	"checkver": {
-		"github": "https://github.com/loft-sh/devspace"
-	},
+	"checkver": "github",
 	"autoupdate": {
 		"architecture": {
 			"64bit": {
-				"url": "https://github.com/loft-sh/devspace/releases/download/$version/devspace-windows-amd64.exe"
+				"url": "https://github.com/loft-sh/devspace/releases/download/v$version/devspace-windows-amd64.exe"
 			},
 			"32bit": {
-				"url": "https://github.com/loft-sh/devspace/releases/download/$version/devspace-windows-386.exe"
+				"url": "https://github.com/loft-sh/devspace/releases/download/v$version/devspace-windows-386.exe"
 			}
+		},
+		"hash": {
+			"url": "$url.sha256"
 		}
 	}
 }
