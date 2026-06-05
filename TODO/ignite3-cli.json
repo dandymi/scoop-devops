@@ -1,0 +1,29 @@
+{
+    "version": "3.1.0",
+    "description": "",
+    "homepage": "https://ignite.apache.org/",
+    "licence": "Apache-2.0",
+    "suggest": {
+        "JDK": [
+            "java/oraclejdk",
+            "java/openjdk"
+        ]
+    },
+    "url": "https://downloads.apache.org/ignite/3.1.0/ignite3-cli-3.1.0.zip",
+    "hash": "sha512:28c558e0e16b6030cdfe07b669821c18bff32735c3d2f5fbee1c97f3914bdca91ecccd39579cd112624920f9ca7810dac33f1ee984a30db24cd53dcf423c96a3",
+    "extract_dir": "ignite3-cli-3.1.0",
+    "bin": [
+        ["bin\\ignite3.bat", "ignite3"]
+    ],
+    "checkver": {
+        "url": "https://ignite.apache.org/download.cgi",
+        "regex": "([\\d.]+)\\. (latest)"
+    },
+    "autoupdate": {
+        "url": "https://downloads.apache.org/ignite/$version/ignite3-cli-$version.zip",
+        "hash": {
+            "url": "$url.sha512"
+        },
+        "extract_dir": "ignite3-cli-$version"
+    }
+}

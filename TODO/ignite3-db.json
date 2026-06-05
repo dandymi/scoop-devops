@@ -1,0 +1,30 @@
+{
+    "version": "3.1.0",
+    "description": "",
+    "homepage": "https://ignite.apache.org/",
+    "licence": "Apache-2.0",
+    "suggest": {
+        "JDK": [
+            "java/oraclejdk",
+            "java/openjdk"
+        ]
+    },
+    "url": "https://downloads.apache.org/ignite/3.1.0/ignite3-db-3.1.0.zip",
+    "hash": "sha512:",
+    "extract_dir": "ignite3-db-3.1.0",
+    "bin": [
+        ["bin\\ignite3db.bat", "ignite3db"]
+    ],
+    "persist": "work",
+    "checkver": {
+        "url": "https://ignite.apache.org/download.cgi",
+        "regex": "([\\d.]+)\\. (latest)"
+    },
+    "autoupdate": {
+        "url": "https://downloads.apache.org/ignite/$version/ignite3-db-$version.zip",
+        "hash": {
+            "url": "$url.sha512"
+        },
+        "extract_dir": "ignite3-db-$version"
+    }
+}
