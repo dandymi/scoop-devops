@@ -1,0 +1,33 @@
+{
+    "version": "v3.0.21",
+    "description": "Devin, the AI software engineer",
+    "homepage": "https://devin.ai/",
+    "licence": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://windsurf-stable.codeiumdata.com/win32-x64-archive/stable/0dd4d6fcdeb45c5f8e64bb8b3b10ad4a755ac66e/Devin-win32-x64-3.0.21.zip",
+            "checkver": "https://devin.ai/download/confirmation?code=wu"
+        },
+        "arm64": {
+            "url": "https://windsurf-stable.codeiumdata.com/win32-arm64-archive/stable/0dd4d6fcdeb45c5f8e64bb8b3b10ad4a755ac66e/Devin-win32-arm64-3.0.21.zip",
+            "checkver": "https://devin.ai/download/confirmation?code=wa"
+        }
+    },
+    "bin": "bin\\devin-desktop.cmd",
+    "shortcuts": [
+        [
+            "bin\\devin-desktop.cmd",
+            "devin-desktop"
+        ]
+    ],
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://windsurf-stable.codeiumdata.com/win32-x64-archive/stable/$url.hash/Devin-win32-x64-$version.zip"
+            },
+            "arm64": {
+                "url": "https://windsurf-stable.codeiumdata.com/win32-arm64-archive/stable/$url.hash/Devin-win32-arm64-$version.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "version": "v0.1.9",
+    "description": "The Open Source Alternative to Cluely",
+    "homepage": "https://pluely.com/",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/iamsrikanthnani/pluely/releases/download/app-v0.1.9/Pluely_0.1.9_x64-setup.exe",
+            "hash": "sha256:ebdd5c02cf48fd2d952cfaa1f88703d0580237ec07af4c6682e55d176f6f5d70"
+        }
+    },
+}
