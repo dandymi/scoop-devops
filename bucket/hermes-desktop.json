@@ -1,12 +1,12 @@
 {
-    "version": "0.6.34",
+    "version": "0.6.35",
     "description": "Desktop Companion for Hermes Agent",
     "homepage": "https://github.com/fathah/hermes-desktop/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/fathah/hermes-desktop/releases/download/v0.6.34/hermes-desktop-0.6.34-setup.exe#/dl.7z",
-            "hash": "e608f74df2a751b322fad0b3274853c9e8ceaef72c40d13c258986d031f201c5",
+            "url": "https://github.com/fathah/hermes-desktop/releases/download/v0.6.35/hermes-desktop-0.6.35-setup.exe#/dl.7z",
+            "hash": "89bb5f1f098a8320c89d471e2e30b9d1690d3b68ff63e4b7ee84b4e52824742b",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\Uninstall hermes-agent.exe\" -Recurse -Force -ErrorAction SilentlyContinue"
