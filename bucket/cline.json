@@ -1,13 +1,13 @@
 {
-    "version": "3.0.35",
+    "version": "3.0.36",
     "description": "CLI utility for Cline",
     "homepage": "https://cline.bot/cli",
     "license": "Apache-2.0",
     "depends": "versions/nodejs24",
     "architecture": {
         "64bit": {
-            "url": "https://registry.npmjs.org/cline/-/cline-3.0.35.tgz",
-            "hash": "sha1:c7dc07cdc64f9420ee66b3c9d69c52ee2c33db32"
+            "url": "https://registry.npmjs.org/cline/-/cline-3.0.36.tgz",
+            "hash": "sha1:c91371b97e6bf394bbd000ad8bc0e7f6fa3012b8"
         }
     },
     "pre_install": [
