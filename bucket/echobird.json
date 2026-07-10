@@ -1,0 +1,25 @@
+{
+    "version": "5.5.1",
+    "description": "One-click install AI Agents (Claude Code, OpenClaw, Hermes Agent, etc.)",
+    "homepage": "https://github.com/edison7009/EchoBird",
+    "license": "MIT",
+    "url": "https://github.com/edison7009/EchoBird/releases/download/v5.5.1/EchoBird_5.5.1_Windows_x64-setup.exe",
+    "hash": "7cd4b9c631245c98f18445d89d429459ff5a3357054d7b08e69578e5ff2c8c55",
+    "installer": {
+        "script": "Expand-7zipArchive \"$dir\\$fname\" \"$dir\""
+    },
+    "bin": "EchoBird.exe",
+    "shortcuts": [
+        [
+            "EchoBird.exe",
+            "EchoBird"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/edison7009/EchoBird/releases/latest",
+        "regex": "\"tag_name\":\\s*\"v([\\d.]+)\""
+    },
+    "autoupdate": {
+        "url": "https://github.com/edison7009/EchoBird/releases/download/v$version/EchoBird_$version_Windows_x64-setup.exe"
+    }
+}
